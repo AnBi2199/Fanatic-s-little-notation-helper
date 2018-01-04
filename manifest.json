@@ -1,17 +1,15 @@
 {
 "manifest_version": 2,
-    "name": "Fanatic's little helper",
+    "name": "Fanatic's Little Helper (Beta)",
     "description": "Numbers scare you too? Here is a little tool so you don't need a coach to teach you the numpad notation.",
     "version": "1.0",
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*/*"
-            ],
-            "js": [
-                "content.js"
-            ],
-            "run_at": "document_end"
-        }
-    ]
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"permissions": [
+		"activeTab"
+	],
+	"background": {
+		"scripts": ["background.js"]
+	}
 }
